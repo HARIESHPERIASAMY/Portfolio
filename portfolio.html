@@ -8,6 +8,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -38,8 +41,8 @@
         }
 
         .sidebar img {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
@@ -69,6 +72,7 @@
             text-decoration: none;
             color: #cbd5f5;
             border-radius: 8px;
+            transition: background 0.3s;
         }
 
         .menu a:hover {
@@ -88,6 +92,13 @@
             font-size: 24px;
             margin-bottom: 20px;
             color: #38bdf8;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
         }
 
         .hero h1 {
@@ -112,6 +123,53 @@
             border-radius: 10px;
         }
 
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #020617;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact-box {
+            background: #020617;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        .contact-box button {
+            width: 100%;
+            padding: 12px;
+            background: #38bdf8;
+            border: none;
+            color: #020617;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
         footer {
             text-align: center;
             padding-top: 40px;
@@ -120,6 +178,10 @@
 
         @media (max-width: 900px) {
             .page {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
                 grid-template-columns: 1fr;
             }
         }
@@ -132,5 +194,88 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-        <!-- ✅ PROFILE IMAGE EMBEDDED -->
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAADjGkKzAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOy9d5hddZ3/9+9z7p2Zmd2d3W4kFZQESYQEUZC4pCg8jC2C3QmVJpJtH0Jj5k6k3m2qz5a2pZ2W7S0lQy2y6nK0U4iIoiQhRZC0QZQhQkQ9E7z9zzr3zZ2Znd3Z2f7+z+8+7v+z9z7n3P+e8zznP+f+f+zj+zv8k3xF0A8+F8G4X9g+EwQ8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y8H0Q8H0g4H0Y
+        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="Profile">
+        <h2>Hariesh P</h2>
+        <p>CSE Student | AI & Full-Stack</p>
+
+        <nav class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="content">
+
+        <section class="hero" id="home">
+            <div>
+                <h1>Hello, I'm <span>Hariesh</span></h1>
+                <p>
+                    A Computer Science Engineering student passionate about
+                    Artificial Intelligence, Machine Learning, and building
+                    impactful real-world applications.
+                </p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h3>About Me</h3>
+            <p>
+                I enjoy developing intelligent systems and scalable applications.
+                My interests include AI, data-driven solutions, and full-stack
+                development with a focus on practical problem-solving.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h3>Skills</h3>
+            <div class="skills">
+                <div class="skill-box">HTML</div>
+                <div class="skill-box">CSS</div>
+                <div class="skill-box">JavaScript</div>
+                <div class="skill-box">React</div>
+                <div class="skill-box">Java</div>
+                <div class="skill-box">Python</div>
+                <div class="skill-box">C++</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="projects">
+                <div class="project-card">
+                    <h4>Diabetes Prediction System</h4>
+                    <p>Machine learning model to predict diabetes risk.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h4>AI Health Chatbot</h4>
+                    <p>Public health chatbot for disease awareness.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>Contact</h3>
+            <div class="contact-box">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button>Send Message</button>
+            </div>
+        </section>
+
+        <footer>
+            © 2025 Hariesh P | Portfolio
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
